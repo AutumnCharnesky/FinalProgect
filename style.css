@@ -1,0 +1,8 @@
+.header {
+  height: inherit;
+  width: 400px;
+  border: double;
+  text-align: center;
+  margin-left: 36%;
+  background-color: red;
+}
