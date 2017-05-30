@@ -1,1 +1,79 @@
-<p>huuuuuu</p>
+<div class="container">
+
+  <div class="stuff">
+
+    <div class="dropDowns">
+      <div class="col-lg-6">
+        <div>
+          <h3 ng-click="toggle()">barbarian</h3><p ng-show="show">{{posts1}}</p><br>
+          <h3 ng-click="toggle()">bard</h3><p ng-show="show">{{posts2}}</p><br>
+          <h3 ng-click="toggle()">cleric</h3><p ng-show="show">{{posts3}}</p><br>
+          <h3 ng-click="toggle()">druid</h3><p ng-show="show">{{posts4}}</p><br>
+          <h3 ng-click="toggle()">fighter</h3><p ng-show="show">{{posts5}}</p><br>
+          <h3 ng-click="toggle()">monk</h3><p ng-show="show">{{posts6}}</p><br>
+          <h3 ng-click="toggle()">paladin</h3><p ng-show="show">{{posts7}}</p><br>
+          <h3 ng-click="toggle()">ranger</h3><p ng-show="show">{{posts8}}</p><br>
+          <h3 ng-click="toggle()">rogue</h3><p ng-show="show">{{posts9}}</p><br>
+          <h3 ng-click="toggle()">sorcerer</h3><p ng-show="show">{{posts10}}</p><br>
+          <h3 ng-click="toggle()">warlock</h3><p ng-show="show">{{posts11}}</p><br>
+          <h3 ng-click="toggle()">wizard</h3><p ng-show="show">{{posts12}}</p>
+
+        </div>
+
+          <div>
+            <select name="select" ng-model="player.race">
+              <option value="dragonborn">Dragonborn</option>
+              <option value="dwarf">Dwarf</option>
+              <option value="elf">Elf</option>
+              <option value="halfling">Halfling</option>
+              <option value="halfElf">Half Elf</option>
+              <option value="halfOrc">Half Orc</option>
+              <option value="Human">Human</option>
+              <option value="Knome">Knome</option>
+              <option value="Teifling">Teifling</option>
+            </select>
+          </div>
+
+          <div>
+            <select name="select" ng-model="player.class">
+              <option value="barbarian">Barbarian</option>
+              <option value="bard">Bard</option>
+              <option value="cleric">Cleric</option>
+              <option value="druid">Druid</option>
+              <option value="fighter">Fighter</option>
+              <option value="monk">Monk</option>
+              <option value="paladin">Paladin</option>
+              <option value="ranger">Ranger</option>
+              <option value="rogue">Rogue</option>
+              <option value="sorcerer">Sorcerer</option>
+              <option value="warlock">Warlock</option>
+              <option value="wizard">Wizard</option>
+            </select>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="inputs">
+      <div class="col-lg-6">
+        <div>
+          <label><input type="text" ng-model="player.name"></label>
+        </div>
+
+        <div>
+          <label><input type="text" ng-model="player.charName"></label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="stuff">
+    <div class="col-lg-12">
+      <button type="button" ng-click="save(player)">Save</button>
+    </div>
+  </div>
+
+  <p ng-repeat="info in playerInfo"></p>
+
+</div>

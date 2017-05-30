@@ -1,8 +1,28 @@
+body {
+  /*background-image: url(images/background.jpg);*/
+}
+
 .header {
   height: inherit;
-  width: 400px;
+  width: inherit;
   border: double;
   text-align: center;
-  margin-left: 36%;
-  background-color: red;
+  margin-top: 30px;
+  background-color: rgba(102, 51, 0, 0.7);
+  font-family: 'Metamorphous', cursive;
+  text-decoration-color: black;
+  font-weight: bold;
+}
+
+/*welcome screen*/
+h3 {
+  font-family: 'Metamorphous', cursive;
+  background-color: rgba(102, 51, 0, 0.7);
+  width: auto;
+  height: auto;
+  border: double;
+}
+
+h5 {
+  font-family: 'Metamorphous', cursive;
 }
