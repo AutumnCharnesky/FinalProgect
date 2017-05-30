@@ -19,20 +19,67 @@ app.config(function($routeProvider) {
 app.controller("dndCtrl", function($scope, $http) {
 console.log('ctrl works');
 
-  $scope.toggle = function () {
-    $scope.show = !$scope.show;
-  };
+    $scope.toggle = function () {
+      $scope.show = !$scope.show;
+    };
+
+    $scope.toggle1 = function () {
+      $scope.show1 = !$scope.show1;
+    };
+
+    $scope.toggle2 = function () {
+      $scope.show2 = !$scope.show2;
+    };
+
+    $scope.toggle3 = function () {
+      $scope.show3 = !$scope3.show;
+    };
+
+    $scope.toggle4 = function () {
+      $scope.show4 = !$scope.show4;
+    };
+
+    $scope.toggle5 = function () {
+      $scope.show5 = !$scope.show5;
+    };
+
+    $scope.toggle6 = function () {
+      $scope.show6 = !$scope.show6;
+    };
+
+    $scope.toggle7 = function () {
+      $scope.show7 = !$scope.show7;
+    };
+
+    $scope.toggle8 = function () {
+      $scope.show8 = !$scope.show8;
+    };
+
+    $scope.toggle9 = function () {
+      $scope.show9 = !$scope.show9;
+    };
+
+    $scope.toggle10 = function () {
+      $scope.show10 = !$scope.show10;
+    };
+
+    $scope.toggle11 = function () {
+      $scope.show11 = !$scope.show11;
+    };
+
+
 
   $scope.playerInfo = [];
 
   $scope.save = function(player) {
-    console.log(player.name, player.charName, player.race, player.class);
+    console.log(player.name, player.charName, player.race, player.class, $scope.rolled);
 
     $scope.playerInfo.unshift( {
       name: player.name,
       character: player.charName,
       race: player.race,
       class: player.class
+    //  roll: player.rolled
     });
     console.log($scope.playerInfo);
 
@@ -80,6 +127,16 @@ console.log('ctrl works');
     }
 
   })
+
+    $scope.makeRoll = function() {
+      var i = Math.floor(Math.random() * (6-1) + 1);
+      console.log(i);
+      $scope.rolled = i;
+      console.log($scope.rolled);
+      $scope.playerInfo.unshift( {
+        roll: $scope.rolled
+      });
+    };
 
 });
 

@@ -6,17 +6,17 @@
       <div class="col-lg-6">
         <div>
           <h3 ng-click="toggle()">barbarian</h3><p ng-show="show">{{posts1}}</p><br>
-          <h3 ng-click="toggle()">bard</h3><p ng-show="show">{{posts2}}</p><br>
-          <h3 ng-click="toggle()">cleric</h3><p ng-show="show">{{posts3}}</p><br>
-          <h3 ng-click="toggle()">druid</h3><p ng-show="show">{{posts4}}</p><br>
-          <h3 ng-click="toggle()">fighter</h3><p ng-show="show">{{posts5}}</p><br>
-          <h3 ng-click="toggle()">monk</h3><p ng-show="show">{{posts6}}</p><br>
-          <h3 ng-click="toggle()">paladin</h3><p ng-show="show">{{posts7}}</p><br>
-          <h3 ng-click="toggle()">ranger</h3><p ng-show="show">{{posts8}}</p><br>
-          <h3 ng-click="toggle()">rogue</h3><p ng-show="show">{{posts9}}</p><br>
-          <h3 ng-click="toggle()">sorcerer</h3><p ng-show="show">{{posts10}}</p><br>
-          <h3 ng-click="toggle()">warlock</h3><p ng-show="show">{{posts11}}</p><br>
-          <h3 ng-click="toggle()">wizard</h3><p ng-show="show">{{posts12}}</p>
+          <h3 ng-click="toggle1()">bard</h3><p ng-show="show1">{{posts2}}</p><br>
+          <h3 ng-click="toggle2()">cleric</h3><p ng-show="show2">{{posts3}}</p><br>
+          <h3 ng-click="toggle3()">druid</h3><p ng-show="show3">{{posts4}}</p><br>
+          <h3 ng-click="toggle4()">fighter</h3><p ng-show="show4">{{posts5}}</p><br>
+          <h3 ng-click="toggle5()">monk</h3><p ng-show="show5">{{posts6}}</p><br>
+          <h3 ng-click="toggle6()">paladin</h3><p ng-show="show6">{{posts7}}</p><br>
+          <h3 ng-click="toggle7()">ranger</h3><p ng-show="show7">{{posts8}}</p><br>
+          <h3 ng-click="toggle8()">rogue</h3><p ng-show="show8">{{posts9}}</p><br>
+          <h3 ng-click="toggle9()">sorcerer</h3><p ng-show="show9">{{posts10}}</p><br>
+          <h3 ng-click="toggle10()">warlock</h3><p ng-show="show10">{{posts11}}</p><br>
+          <h3 ng-click="toggle11()">wizard</h3><p ng-show="show11">{{posts12}}</p>
 
         </div>
 
@@ -62,6 +62,10 @@
 
         <div>
           <label><input type="text" ng-model="player.charName"></label>
+        </div>
+
+        <div>
+          <button type="button" ng-model="player.rolled" ng-click="makeRoll()">Roll One</button>
         </div>
       </div>
     </div>
