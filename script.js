@@ -1,6 +1,7 @@
 (function() {
 var app = angular.module("dndMod", ["ngRoute", "ui.bootstrap"])
 
+// view route
 app.config(function($routeProvider) {
   $routeProvider.when("/view", {
     templateUrl: "view.html"
@@ -8,99 +9,71 @@ app.config(function($routeProvider) {
   .when("/view1", {
     templateUrl: "view1.html"
   })
-  // .when("/save", {
-  //   templateUrl: "view.html"
-  // })
   .otherwise( {
-    template: "<center><h3>Welcome</h3><br><h5>Build your own Dungeons & Dragons character or view characters already created with the above links.</5></center>"
+    template: "<center><h3>Welcome</h3><br><h5>Build your own Dungeons & Dragons character or view characters already created with the above links.</h3></center>"
   })
 })
 
-app.controller("dndCtrl", function($scope, $http) {
+// cotroller
+app.controller("dndCtrl", function($scope, $http, $location) {
 console.log('ctrl works');
 
-    $scope.toggle = function () {
-      $scope.show = !$scope.show;
+$scope.view.html = $location.path();
+
+// class toggle control
+    $scope.toggle = function(index) {
+      $scope.show = index;
     };
 
-    $scope.toggle1 = function () {
-      $scope.show1 = !$scope.show1;
+    $scope.toggleLi = function(index) {
+      $scope.openLi = index;
     };
+// end class toggle
 
-    $scope.toggle2 = function () {
-      $scope.show2 = !$scope.show2;
-    };
-
-    $scope.toggle3 = function () {
-      $scope.show3 = !$scope3.show;
-    };
-
-    $scope.toggle4 = function () {
-      $scope.show4 = !$scope.show4;
-    };
-
-    $scope.toggle5 = function () {
-      $scope.show5 = !$scope.show5;
-    };
-
-    $scope.toggle6 = function () {
-      $scope.show6 = !$scope.show6;
-    };
-
-    $scope.toggle7 = function () {
-      $scope.show7 = !$scope.show7;
-    };
-
-    $scope.toggle8 = function () {
-      $scope.show8 = !$scope.show8;
-    };
-
-    $scope.toggle9 = function () {
-      $scope.show9 = !$scope.show9;
-    };
-
-    $scope.toggle10 = function () {
-      $scope.show10 = !$scope.show10;
-    };
-
-    $scope.toggle11 = function () {
-      $scope.show11 = !$scope.show11;
-    };
-
-
-
+// player info to views
   $scope.playerInfo = [];
 
   $scope.save = function(player) {
-    console.log(player.name, player.charName, player.race, player.class, $scope.rolled);
+    console.log(player.name, player.charName, player.race, player.class, player.strength, player.dex, player.con, player.intel, player.wisdom, player.charisma);
 
     $scope.playerInfo.unshift( {
       name: player.name,
       character: player.charName,
       race: player.race,
-      class: player.class
-    //  roll: player.rolled
+      class: player.class,
+      strength: player.strength,
+      dex: player.dex,
+      con: player.con,
+      intel: player.intel,
+      wisdom: player.wisdom,
+      charisma: player.charisma
     });
     console.log($scope.playerInfo);
 
   };
+// end player info to views
 
+// api calls
   $scope.apiLink = [];
 
-  // $http( {
-  //   method: 'GET',
-  //   url: 'http://www.dnd5eapi.co/api/races'
-  // })
-  // .then(function successCall(response) {
-  //   console.log(response.data)
-  // });
+// api d&d races
+  $http( {
+    method: 'GET',
+    url: 'http://5e-api.com/v1/races/'
+  })
+  .then(function successCall(response) {
+    console.log(response.data)
 
+  });
+
+// api d&d classes
   $http( {
     method: 'GET',
     url: 'http://5e-api.com/v1/classes/'
   })
   .then(function successCall(response) {
     console.log(response.data.class_options)
+    // objects in classes
     $scope.posts1 = response.data.class_options.barbarian.short_description;
     $scope.posts2 = response.data.class_options.bard.short_description;
     $scope.posts3 = response.data.class_options.cleric.short_description;
@@ -113,11 +86,13 @@ console.log('ctrl works');
     $scope.posts10 = response.data.class_options.sorcerer.short_description;
     $scope.posts11= response.data.class_options.warlock.short_description;
     $scope.posts12 = response.data.class_options.wizard.short_description;
+    $scope.classes = response.data.class_options;
   },
   function(error) {
     console.log(error);
   });
 
+// api posting onto view1
   app.directive('apiPost', function() {
 
     return {
@@ -127,16 +102,33 @@ console.log('ctrl works');
     }
 
   })
+// api call end
 
+// random num dice
     $scope.makeRoll = function() {
       var i = Math.floor(Math.random() * (6-1) + 1);
       console.log(i);
       $scope.rolled = i;
       console.log($scope.rolled);
-      $scope.playerInfo.unshift( {
-        roll: $scope.rolled
-      });
+
     };
+
+    $scope.makeRoll2 = function() {
+      var i = Math.floor(Math.random() * (6-1) + 1);
+      console.log(i);
+      $scope.rolled2 = i;
+      console.log($scope.rolled2);
+
+    };
+
+    $scope.makeRoll3 = function() {
+      var i = Math.floor(Math.random() * (6-1) + 1);
+      console.log(i);
+      $scope.rolled3 = i;
+      console.log($scope.rolled3);
+
+    };
+  // reandom dice end
 
 });
 
@@ -145,10 +137,7 @@ console.log('ctrl works');
 
 
 
-
-
-// api
-// http://www.dnd5eapi.co/api/classes
+// apiiiiissss
 //
-// [1:37]
-// http://www.dnd5eapi.co/api/races
+// http://5e-api.com/v1/classes/
+// http://5e-api.com/v1/races/
