@@ -1,0 +1,5 @@
+{
+  "name": "dndcreator",
+  "description": "dnd character creator",
+  "image": "heroku/nodejs"
+}

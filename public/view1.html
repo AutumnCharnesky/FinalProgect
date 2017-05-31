@@ -1,0 +1,148 @@
+<div class="container">
+
+  <div class="stuff">
+
+<div class="openP">
+  <center><h3>Create your own Dungeons & Dragons character here!</h3><br><p>Prepare to embark on a journey, create your new character below.</p></center>
+</div>
+
+<!-- api classes -->
+    <div class="col-lg-4">
+      <div class="outerClass">
+        <div>
+          <div ng-repeat="(name, data) in classes" class="contain">
+            <h4 ng-click="toggle($index)">{{name}}</h4>
+            <p ng-show="show === $index">{{data.short_description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- end api classes -->
+
+<!-- dropdown select for race -->
+        <div class="col-lg-4">
+          <div class="dropDowns">
+            <div>
+              <select name="select" ng-model="player.race">
+                <option value="dragonborn">Dragonborn</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="elf">Elf</option>
+                <option value="halfling">Halfling</option>
+                <option value="half elf">Half Elf</option>
+                <option value="half orc">Half Orc</option>
+                <option value="human">Human</option>
+                <option value="gnome">Gnome</option>
+                <option value="teifling">Teifling</option>
+              </select>
+            </div><br>
+          </div>
+<!-- end race select -->
+
+<!-- dropdown select for class -->
+          <div>
+            <select name="select" ng-model="player.class">
+              <option value="{{name}}" ng-repeat="(name, data) in classes">{{name}}</option>
+            </select>
+          </div><br>
+<!-- end class select -->
+
+<!-- dice buttons -->
+          <div>
+            <button type="button" class="button" ng-model="player.rolled" ng-click="makeRoll()">Roll One</button>
+            <p class="die1">{{rolled}}</p>
+          </div><br>
+
+          <div>
+            <button type="button" class="button" ng-model="player.rolled2" ng-click="makeRoll2()">Roll Two</button>
+            <p class="die1">{{rolled2}}</p>
+          </div><br>
+
+          <div>
+            <button type="button" class="button" ng-model="player.rolled3" ng-click="makeRoll3()">Roll Three</button>
+            <p class="die1">{{rolled3}}</p>
+          </div>
+<!-- end dice buttons -->
+
+        </div>
+
+
+<!-- inputs -->
+    <div class="col-lg-4">
+      <div class="inputs">
+<!-- labels for inputs -->
+        <div class="col-lg-6">
+          <div>
+            <label>Your Name</label>
+          </div><br>
+          <div>
+            <label>Character Name</label>
+          </div><br>
+          <div>
+            <label>Strength</label>
+          </div><br>
+          <div>
+            <label>Dexterity</label>
+          </div><br>
+          <div>
+            <label>Constitution</label>
+          </div><br>
+          <div>
+            <label>Intelligence</label>
+          </div><br>
+          <div>
+            <label>Wisdom</label>
+          </div><br>
+          <div>
+            <label>Charisma</label>
+          </div>
+        </div>
+<!-- end label inputs -->
+
+<!-- input boxes -->
+        <div class="col-lg-6">
+          <div>
+            <input type="text" ng-model="player.name">
+          </div><br>
+          <div>
+            <input type="text" ng-model="player.charName">
+          </div><br>
+          <div>
+            <input type="number" ng-model="player.strength">
+          </div><br>
+          <div>
+            <input type="number" ng-model="player.dex">
+          </div><br>
+          <div>
+            <input type="number" ng-model="player.con">
+          </div><br>
+          <div>
+            <input type="number" ng-model="player.intel">
+          </div><br>
+          <div>
+            <input type="number" ng-model="player.wisdom">
+          </div><br>
+          <div>
+            <input type="number" ng-model="player.charisma">
+          </div>
+        </div>
+<!-- end input boxes -->
+
+      </div>
+
+      </div>
+
+    </div>
+  </div>
+
+<!-- save button -->
+  <div class="stuff">
+    <div class="col-lg-12">
+      <center><button class="button" type="button" ng-click="save(player)">Save</button></center>
+    </div>
+  </div>
+<!-- end save -->
+
+<!-- repeats player info -->
+  <p ng-repeat="info in playerInfo"></p>
+
+</div>
