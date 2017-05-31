@@ -125,6 +125,7 @@ h5 {
 /*dropdowns*/
 .dropDowns {
   margin-top: 50px;
+  padding-bottom: 25px;
 }
 
 /*dive and save buttons*/
@@ -141,7 +142,7 @@ h5 {
 
 .die1 {
   float: right;
-  margin-right: 10px;
+  margin-right: 200px;
   height: 30px;
   width: 30px;
   overflow: hidden;
@@ -159,7 +160,8 @@ h5 {
 .inputs {
   margin-top: 50px;
   border: groove;
-  height: 400px;
+  min-height: 400px;
+  overflow: auto;
   width: 420px;
   background-color: rgba(233, 216, 204, 0.6);
   display: block;

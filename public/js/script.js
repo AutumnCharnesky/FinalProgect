@@ -3,11 +3,11 @@ var app = angular.module("dndMod", ["ngRoute", "ui.bootstrap"])
 
 // view route
 app.config(function($routeProvider) {
-  $routeProvider.when("/view", {
-    templateUrl: "view.html"
+  $routeProvider.when("/home", {
+    templateUrl: "home.html"
   })
-  .when("/view1", {
-    templateUrl: "view1.html"
+  .when("/create", {
+    templateUrl: "create.html"
   })
   .otherwise( {
     template: "<center id='otherwise'><h3>Welcome</h3><br><h5>Build your own Dungeons & Dragons character or view characters already created with the above links.</h3></center>"
@@ -48,7 +48,7 @@ console.log('ctrl works');
     });
     console.log($scope.playerInfo);
 
-    $location.path('/view');
+    $location.path('/home');
 
   };
 // end player info to views
