@@ -18,8 +18,6 @@ app.config(function($routeProvider) {
 app.controller("dndCtrl", function($scope, $http, $location) {
 console.log('ctrl works');
 
-$scope.view.html = $location.path();
-
 // class toggle control
     $scope.toggle = function(index) {
       $scope.show = index;
@@ -49,6 +47,8 @@ $scope.view.html = $location.path();
       charisma: player.charisma
     });
     console.log($scope.playerInfo);
+
+    $location.path('/view');
 
   };
 // end player info to views
