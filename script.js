@@ -10,7 +10,7 @@ app.config(function($routeProvider) {
     templateUrl: "view1.html"
   })
   .otherwise( {
-    template: "<center><h3>Welcome</h3><br><h5>Build your own Dungeons & Dragons character or view characters already created with the above links.</h3></center>"
+    template: "<center id='otherwise'><h3>Welcome</h3><br><h5>Build your own Dungeons & Dragons character or view characters already created with the above links.</h3></center>"
   })
 })
 
@@ -74,35 +74,12 @@ console.log('ctrl works');
   .then(function successCall(response) {
     console.log(response.data.class_options)
     // objects in classes
-    $scope.posts1 = response.data.class_options.barbarian.short_description;
-    $scope.posts2 = response.data.class_options.bard.short_description;
-    $scope.posts3 = response.data.class_options.cleric.short_description;
-    $scope.posts4 = response.data.class_options.druid.short_description;
-    $scope.posts5 = response.data.class_options.fighter.short_description;
-    $scope.posts6 = response.data.class_options.monk.short_description;
-    $scope.posts7 = response.data.class_options.paladin.short_description;
-    $scope.posts8 = response.data.class_options.ranger.short_description;
-    $scope.posts9 = response.data.class_options.rogue.short_description;
-    $scope.posts10 = response.data.class_options.sorcerer.short_description;
-    $scope.posts11= response.data.class_options.warlock.short_description;
-    $scope.posts12 = response.data.class_options.wizard.short_description;
+
     $scope.classes = response.data.class_options;
   },
   function(error) {
     console.log(error);
   });
-
-// api posting onto view1
-  app.directive('apiPost', function() {
-
-    return {
-      restrict: 'E',
-      replace: false,
-      templateUrl: 'view1.html'
-    }
-
-  })
-// api call end
 
 // random num dice
     $scope.makeRoll = function() {
@@ -131,6 +108,18 @@ console.log('ctrl works');
   // reandom dice end
 
 });
+
+// api posting onto view1
+  app.directive('listItem', function() {
+
+    return {
+      restrict: 'E',
+      replace: true,
+      templateUrl: 'listItem.html'
+    }
+
+  })
+// api call end
 
 })();
 

@@ -1,5 +1,5 @@
 <div class="openP">
   <center><h3>Find your character and your friends here!</h3></center>
-</div>
+</div><br>
 
-  <center><h3 class="playerList" ng-repeat="person in playerInfo" ng-click="toggleLi($index)">Player: {{person.name | uppercase}}<br><br> <p ng-show="openLi === $index">Character: {{person.character | uppercase}}<br><br> {{person.race | uppercase}} {{person.class | uppercase}}<br><br> Strength: {{person.strength}} Dexterity: {{person.dex}}<br><br> Constitution: {{person.con}} Intelligence: {{person.intel}}<br><br> Wisdom: {{person.wisdom}} Charisma: {{person.charisma}}</p> </h3></center>
+<list-item ng-repeat="person in playerInfo"></list-item>

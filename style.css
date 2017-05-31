@@ -14,33 +14,51 @@ body {
   margin-top: 30px;
   background-color: rgba(233, 216, 204, 0.6);
   font-family: 'Metamorphous', cursive;
-  text-decoration-color: black;
   font-weight: bold;
   border-color: rgba(28, 11, 3, 1);
   color: rgba(28, 11, 3, 1);
   -webkit-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
   -moz-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
   box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
+  margin-bottom: 50px;
+}
+
+/*welcome screen*/
+#otherwise {
+  align-self: center;
+  margin: 0 auto;
+  min-height: 50px;
+  width: 800px;  font-family: 'Metamorphous', cursive;
+  color: rgba(28, 11, 3, 1);
+  border: groove;
+  background-color: rgba(233, 216, 204, 0.6);
+  border-color: rgba(28, 11, 3, 1);
+  -webkit-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
+  -moz-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
+  box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
+}
+
+.openP {
+  align-self: center;
+  margin: 0 auto;
+  min-height: 50px;
+  width: 800px;
+  overflow: hidden;
+  background-color: rgba(233, 216, 204, 0.6);
+  border: groove;
+  text-align: center;
+  border-color: rgba(28, 11, 3, 1);
+  color: rgba(28, 11, 3, 1);
+  -webkit-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
+  -moz-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
+  box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
+  font-family:  'Metamorphous', cursive;
 }
 
 p {
   font-family: 'Metamorphous', cursive;
   color: rgba(28, 11, 3, 1);
 }
-
-/*welcome screen*/
-/*h3 {
-  font-family: 'Metamorphous', cursive;
-  background-color: rgba(233, 216, 204, 0.6);
-  width: auto;
-  height: auto;
-  border: groove;
-  border-color: rgba(28, 11, 3, 1);
-  color: rgba(28, 11, 3, 1);
-  -webkit-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
-  -moz-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
-  box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
-}*/
 
 h4 {
   font-family: 'Metamorphous', cursive;
@@ -53,6 +71,8 @@ h5 {
 
 /*view player list style*/
 .playerList {
+  align-self: center;
+  margin: 0 auto;
   min-height: 40px;
   width: 500px;
   overflow: hidden;
@@ -64,44 +84,42 @@ h5 {
   -webkit-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
   -moz-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
   box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
+  font-family:  'Metamorphous', cursive;
 }
 /*end view style*/
 
 /*view1 creat character style*/
-
-.openP {
-  align-self: center;
-  margin: 0 auto;
-  min-height: 50px;
-  width: 800px;
-  /*position: absolute;*/
-  overflow: hidden;
-  background-color: rgba(233, 216, 204, 0.6);
+.outerClass {
+  margin-top: 50px;
   border: groove;
-  text-align: center;
+  height: 400px;
+  width: 255px;
+  background-color: rgba(233, 216, 204, 0.6);
+  display: block;
+  padding-top: 15px;
   border-color: rgba(28, 11, 3, 1);
   color: rgba(28, 11, 3, 1);
   -webkit-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
   -moz-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
   box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
-}
-
-/*class api */
-.infoClass {
-  margin-top: 50px;
-  height: 400px;
-  width: 250px;
   overflow: auto;
 }
 
+/*class api */
 .contain {
-  background-color: rgba(233, 216, 204, 0.6);
-  border: groove;
-  border-color: rgba(28, 11, 3, 1);
+  padding-top: 30px;
+  padding-left: 5px;
+  /*margin-top: 50px;*/
+  min-height: 50px;
+  width: 220px;
+  overflow: auto;
   color: rgba(28, 11, 3, 1);
-  -webkit-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
+  /*background-color: rgba(233, 216, 204, 0.6);
+  border: groove;
+  border-color: rgba(28, 11, 3, 1);*/
+  /*-webkit-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
   -moz-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
-  box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
+  box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);*/
 }
 
 /*dropdowns*/
@@ -141,11 +159,11 @@ h5 {
 .inputs {
   margin-top: 50px;
   border: groove;
-  height: 390px;
+  height: 400px;
   width: 420px;
   background-color: rgba(233, 216, 204, 0.6);
   display: block;
-  padding-top: 15px;
+  padding-top: 30px;
   border-color: rgba(28, 11, 3, 1);
   color: rgba(28, 11, 3, 1);
   -webkit-box-shadow: 15px 20px 4px 0px rgba(28, 11, 3, 0.7);
