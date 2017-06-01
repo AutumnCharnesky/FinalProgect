@@ -44,18 +44,15 @@ app.controller("createCtrl", function($scope, $http, $location, dndFactory) {
   });
 
 // random num dice
-// x is a placeholder for which die is being rolled
     $scope.makeRoll = function() {
       var i = Math.floor((Math.random() * 6) + 1);
        $scope.rolled = i;
-      // using console here for troubleshooting
       console.log($scope.rolled);
     };
 
     $scope.makeRoll2 = function() {
       var i = Math.floor((Math.random() * 6) + 1);
        $scope.rolled2 = i;
-      // using console here for troubleshooting
       console.log($scope.rolled2);
     };
 
