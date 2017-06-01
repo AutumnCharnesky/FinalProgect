@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-xs-6">
           <div class="outerClass">
-            <div><h3 class="directions">soup man</h3>
+            <div><h3 class="directions">Classes</h3><p>Click on a class to get a short description.</p>
               <div ng-repeat="(name, data) in classes" class="contain">
               <h4 ng-click="toggle($index)" >{{name}}</h4>
                 <p ng-show="show === $index">{{data.short_description}}</p>
