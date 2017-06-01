@@ -9,46 +9,50 @@
 <!-- api classes -->
 <!-- api controller call starts on line 8 -->
 <!-- toggle controller starts on line 28 -->
-    <div class="col-lg-4">
-      <div class="outerClass">
-        <div>
-          <div ng-repeat="(name, data) in classes" class="contain">
-
-          <h4 ng-click="toggle($index)">{{name}}</h4>
-            <p ng-show="show === $index">{{data.short_description}}</p>
+    <div class="col-lg-8">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="outerClass">
+            <div><h3 class="directions">soup man</h3>
+              <div ng-repeat="(name, data) in classes" class="contain">
+              <h4 ng-click="toggle($index)" >{{name}}</h4>
+                <p ng-show="show === $index">{{data.short_description}}</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-<!-- end api classes -->
+    <!-- end api classes -->
 
-<!-- dice buttons -->
-<!-- dice controller starts on line 35 -->
-        <div class="col-lg-4">
-          <div class="diceInfo">
-          <center><div>
-            <button type="button" class="button" ng-model="player.rolled" ng-click="makeRoll()">Roll One</button>
-            <p class="die1">{{rolled}}</p>
-          </div><br>
+    <!-- dice buttons -->
+    <!-- dice controller starts on line 35 -->
+            <div class="col-xs-6">
+              <div class="diceInfo">
+                <div>
+                  <button type="button" class="button" ng-model="player.rolled" ng-click="makeRoll()">Roll One</button>
+                  <p class="die1">{{rolled}}</p>
+                </div><br>
 
-          <div>
-            <button type="button" class="button" ng-model="player.rolled2" ng-click="makeRoll2()">Roll Two</button>
-            <p class="die1">{{rolled2}}</p>
-          </div><br>
+                <div>
+                  <button type="button" class="button" ng-model="player.rolled2" ng-click="makeRoll2()">Roll Two</button>
+                  <p class="die1">{{rolled2}}</p>
+                </div><br>
 
-          <div>
-            <button type="button" class="button" ng-model="player.rolled3" ng-click="makeRoll3()">Roll Three</button>
-            <p class="die1">{{rolled3}}</p>
-          </div></center>
+                <div>
+                  <button type="button" class="button" ng-model="player.rolled3" ng-click="makeRoll3()">Roll Three</button>
+                  <p class="die1">{{rolled3}}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
 <!-- end dice buttons -->
 
 <!-- inputs -->
     <div class="col-lg-4">
-      <div class="inputs">
+      <div class="row inputs">
 <!-- labels for inputs -->
-        <div class="col-lg-6">
+        <div class="col-xs-6">
           <div>
             <label>Your Name</label>
           </div><br>
@@ -84,69 +88,73 @@
 
 <!-- input boxes -->
 <!-- playerInfo controller starts on line 57 -->
-        <div class="col-lg-6">
-          <div>
-            <input type="text" ng-model="player.name">
-          </div><br>
-          <div>
-            <input type="text" ng-model="player.charName">
-          </div><br>
-          <div>
-            <input type="number" ng-model="player.strength">
-          </div><br>
-          <div>
-            <input type="number" ng-model="player.dex">
-          </div><br>
-          <div>
-            <input type="number" ng-model="player.con">
-          </div><br>
-          <div>
-            <input type="number" ng-model="player.intel">
-          </div><br>
-          <div>
-            <input type="number" ng-model="player.wisdom">
-          </div><br>
-          <div>
-            <input type="number" ng-model="player.charisma">
-          </div><br>
-        </div>
-<!-- end input boxes -->
+        <div class="col-xs-6">
+          <div  class="inputBlank">
+            <div>
+              <input type="text" ng-model="player.name">
+            </div><br>
+            <div>
+              <input type="text" ng-model="player.charName">
+            </div><br>
+            <div>
+              <input type="number" ng-model="player.strength">
+            </div><br>
+            <div>
+              <input type="number" ng-model="player.dex">
+            </div><br>
+            <div>
+              <input type="number" ng-model="player.con">
+            </div><br>
+            <div>
+              <input type="number" ng-model="player.intel">
+            </div><br>
+            <div>
+              <input type="number" ng-model="player.wisdom">
+            </div><br>
+            <div>
+              <input type="number" ng-model="player.charisma">
+            </div><br>
+          </div>
+  <!-- end input boxes -->
 
-<!-- dropdown for race -->
-          <div>
-            <select name="select" ng-model="player.race">
-              <option value="dragonborn">Dragonborn</option>
-              <option value="dwarf">Dwarf</option>
-              <option value="elf">Elf</option>
-              <option value="halfling">Halfling</option>
-              <option value="half elf">Half Elf</option>
-              <option value="half orc">Half Orc</option>
-              <option value="human">Human</option>
-              <option value="gnome">Gnome</option>
-              <option value="teifling">Teifling</option>
-            </select>
-          </div><br>
+  <!-- dropdown for race -->
+            <div>
+              <select name="select" ng-model="player.race">
+                <option value="dragonborn">Dragonborn</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="elf">Elf</option>
+                <option value="halfling">Halfling</option>
+                <option value="half elf">Half Elf</option>
+                <option value="half orc">Half Orc</option>
+                <option value="human">Human</option>
+                <option value="gnome">Gnome</option>
+                <option value="teifling">Teifling</option>
+              </select>
+            </div><br>
 
-<!-- controller for api call starts on line 8 -->
-          <div>
-            <select name="select" ng-model="player.class">
-              <option value="{{name}}" ng-repeat="(name, data) in classes">{{name}}</option>
-            </select>
+  <!-- controller for api call starts on line 8 -->
+            <div>
+              <select name="select" ng-model="player.class">
+                <option value="{{name}}" ng-repeat="(name, data) in classes">{{name}}</option>
+              </select>
+            </div>
           </div>
 
+          <!-- save playerInfo on line 57 -->
+          <!-- save button -->
+            <div class="stuff">
+              <div class="col-lg-12">
+                <center><button class="save" type="button" ng-click="save(player)">Save</button></center>
+              </div><br><br>
+            </div>
+          <!-- end save -->
+
       </div>
-      </div>
+    </div>
     </div>
   </div>
 
-<!-- save playerInfo on line 57 -->
-<!-- save button -->
-  <div class="stuff">
-    <div class="col-lg-12">
-      <center><button class="button" type="button" ng-click="save(player)">Save</button></center>
-    </div><br><br>
-  </div>
-<!-- end save -->
+
 
 <!-- repeats player info -->
 <!-- playerInfo repeated to show array -->
