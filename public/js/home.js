@@ -1,9 +1,9 @@
 var app = angular.module("dndMod");
 
-// cotroller
+// cotroller for home.html
 app.controller("homeCtrl", function($scope, $http, $location, dndFactory) {
-console.log(' home ctrl 2 works');
 
+// collecting info from retrieve and setting it equal to the factory variable named +playerInfo
   $scope.playerInfo = dndFactory.retrieve();
 
   $scope.toggleLi = function(index) {
@@ -12,7 +12,8 @@ console.log(' home ctrl 2 works');
 
 });
 
-// api posting onto view1
+
+// taking information from listItem.html and making it a directive called on home.html
   app.directive('listItem', function() {
 
     return {
