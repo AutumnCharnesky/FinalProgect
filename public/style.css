@@ -25,7 +25,6 @@ body {
 
 /*welcome screen*/
 #otherwise {
-  align-self: center;
   margin: 0 auto;
   min-height: 50px;
   width: 800px;  font-family: 'Metamorphous', cursive;
@@ -39,7 +38,6 @@ body {
 }
 
 .openP {
-  align-self: center;
   margin: 0 auto;
   min-height: 50px;
   width: 800px;
@@ -71,7 +69,6 @@ h5 {
 
 /*view player list style*/
 .playerList {
-  align-self: center;
   margin: 0 auto;
   min-height: 40px;
   width: 500px;
@@ -123,7 +120,7 @@ h5 {
 }
 
 /*dropdowns*/
-.dropDowns {
+.diceInfo {
   margin-top: 50px;
   padding-bottom: 25px;
 }

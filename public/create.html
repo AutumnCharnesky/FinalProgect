@@ -7,11 +7,14 @@
 </div>
 
 <!-- api classes -->
+<!-- api controller call starts on line 8 -->
+<!-- toggle controller starts on line 28 -->
     <div class="col-lg-4">
       <div class="outerClass">
         <div>
           <div ng-repeat="(name, data) in classes" class="contain">
-            <h4 ng-click="toggle($index)">{{name}}</h4>
+
+          <h4 ng-click="toggle($index)">{{name}}</h4>
             <p ng-show="show === $index">{{data.short_description}}</p>
           </div>
         </div>
@@ -19,18 +22,10 @@
     </div>
 <!-- end api classes -->
 
-<!-- dropdown select for race -->
-        <div class="col-lg-4">
-          <div class="dropDowns">
-
-
-<!-- end race select -->
-
-<!-- dropdown select for class -->
-          <!-- <br> -->
-<!-- end class select -->
-
 <!-- dice buttons -->
+<!-- dice controller starts on line 35 -->
+        <div class="col-lg-4">
+          <div class="diceInfo">
           <center><div>
             <button type="button" class="button" ng-model="player.rolled" ng-click="makeRoll()">Roll One</button>
             <p class="die1">{{rolled}}</p>
@@ -45,10 +40,9 @@
             <button type="button" class="button" ng-model="player.rolled3" ng-click="makeRoll3()">Roll Three</button>
             <p class="die1">{{rolled3}}</p>
           </div></center>
-<!-- end dice buttons -->
           </div>
         </div>
-
+<!-- end dice buttons -->
 
 <!-- inputs -->
     <div class="col-lg-4">
@@ -78,32 +72,18 @@
           </div><br>
           <div>
             <label>Charisma</label>
-          </div>
-
-          <div>
-            <select name="select" ng-model="player.race">
-              <option value="dragonborn">Dragonborn</option>
-              <option value="dwarf">Dwarf</option>
-              <option value="elf">Elf</option>
-              <option value="halfling">Halfling</option>
-              <option value="half elf">Half Elf</option>
-              <option value="half orc">Half Orc</option>
-              <option value="human">Human</option>
-              <option value="gnome">Gnome</option>
-              <option value="teifling">Teifling</option>
-            </select>
           </div><br>
-
           <div>
-            <select name="select" ng-model="player.class">
-              <option value="{{name}}" ng-repeat="(name, data) in classes">{{name}}</option>
-            </select>
+            <label>Race</label>
+          </div><br>
+          <div>
+            <label>Class</label>
           </div>
-
-        </div>
+          </div>
 <!-- end label inputs -->
 
 <!-- input boxes -->
+<!-- playerInfo controller starts on line 57 -->
         <div class="col-lg-6">
           <div>
             <input type="text" ng-model="player.name">
@@ -128,17 +108,38 @@
           </div><br>
           <div>
             <input type="number" ng-model="player.charisma">
-          </div>
+          </div><br>
         </div>
 <!-- end input boxes -->
 
-      </div>
+<!-- dropdown for race -->
+          <div>
+            <select name="select" ng-model="player.race">
+              <option value="dragonborn">Dragonborn</option>
+              <option value="dwarf">Dwarf</option>
+              <option value="elf">Elf</option>
+              <option value="halfling">Halfling</option>
+              <option value="half elf">Half Elf</option>
+              <option value="half orc">Half Orc</option>
+              <option value="human">Human</option>
+              <option value="gnome">Gnome</option>
+              <option value="teifling">Teifling</option>
+            </select>
+          </div><br>
+
+<!-- controller for api call starts on line 8 -->
+          <div>
+            <select name="select" ng-model="player.class">
+              <option value="{{name}}" ng-repeat="(name, data) in classes">{{name}}</option>
+            </select>
+          </div>
 
       </div>
-
+      </div>
     </div>
   </div>
 
+<!-- save playerInfo on line 57 -->
 <!-- save button -->
   <div class="stuff">
     <div class="col-lg-12">
@@ -148,6 +149,7 @@
 <!-- end save -->
 
 <!-- repeats player info -->
+<!-- playerInfo repeated to show array -->
   <p ng-repeat="info in playerInfo"></p>
 
 </div>
